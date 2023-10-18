@@ -116,7 +116,7 @@ async def main(client: Client, message: Message):
         await message.edit(
             text=f"Trying to Get All Messages from `{str(Config.FORWARD_FROM_CHAT_ID[0])}` and Forwarding to {' '.join(str(Config.FORWARD_TO_CHAT_ID))} ...",
             disable_web_page_preview=True)
-        await asyncio.sleep(5)
+        await asyncio.sleep(25)
         try_kang = await Kanger(c=User, m=message)
         if try_kang == 400:
             return
